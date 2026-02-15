@@ -37,9 +37,9 @@ The architecture follows a pipeline pattern: Input → Extraction → Scoring �
 │   Context Extractor       │   │   Decision Orchestrator  │
 │   (Lambda + Bedrock)      │   │   (Lambda)               │
 └───────────┬───────────────┘   └────────┬─────────────────┘
-            │                             │
-            │ Decision_Profile            │
-            ▼                             │
+            │                            │
+            │ Decision_Profile           │
+            ▼                            │
 ┌───────────────────────────┐            │
 │      DynamoDB             │◄───────────┤
 │  (Decision Profiles)      │            │
@@ -915,3 +915,4 @@ describe('Decision Engine', () => {
 - Run property tests on every pull request
 - Run integration tests before deployment
 - Monitor production errors and add regression tests
+
